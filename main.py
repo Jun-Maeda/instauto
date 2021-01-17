@@ -88,10 +88,11 @@ def clicknice():
                 follow_button.click()
                 # フォローした人にのみコメントを残す
                 try:
+                    comment = os.environ['COMMENT']
                     driver.find_element_by_class_name(
                         'Ypffh').click()
                     driver.find_element_by_class_name(
-                        'Ypffh').send_keys("フォローさせていただきました！")
+                        'Ypffh').send_keys(comment)
                     time.sleep(3)
                     driver.find_element_by_css_selector(
                         '.X7cDz .sqdOP').click()
@@ -145,7 +146,8 @@ def clicknice():
 
 
 if __name__ == '__main__':
-    taglist = ['広がり同盟']  # ここに自分の好きなハッシュタグを記載 #######
+    # taglist = ['広がり同盟']  # ここに自分の好きなハッシュタグを記載 #######
+    taglist = os.environ['HASHTAG']
     option = Options()
     # option.add_argument('--headless')
     driver = webdriver.Chrome(

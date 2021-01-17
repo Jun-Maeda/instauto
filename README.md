@@ -43,16 +43,14 @@ touch .env
 echo USERNAME="インスタアカウント名" >> .env
 echo PASSWORD="インスタパスワード" >> .env
 echo DBNAME=データベース名.db >> .env
+echo COMMENT="コメント文" >> .env
+echo HASHTAG="ハッシュタグの名前" >> .env
 python3 venv venv
 source venv/bin/activate
 pip install -r requirements.txt
 ```
  
 # Usage
- 
-![使い方](https://user-images.githubusercontent.com/50643679/104118599-b51c3f00-536d-11eb-8acb-189df9fa8e46.png)
-
-"main.py" のハッシュタグを設定。
 
 ```bash
 pip install -r requirements.txt
