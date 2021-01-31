@@ -75,7 +75,7 @@ def clicknice():
         post_contain_plane_format = re.sub('\s', '', post_contain)
         print(post_contain_plane_format)
 
-        for i in range(random.randint(200, 300)):
+        for i in range(random.randint(100, 200)):
             # follow_button = driver.find_element_by_css_selector(
             # '.bY2yH .sqdOP')
             follow_button = wait.until(EC.visibility_of_element_located(
@@ -154,7 +154,7 @@ if __name__ == '__main__':
         options=option)
     time.sleep(1)
     login()
-    tagsearch(random.choice(taglist))
+    tagsearch(taglist)
     clicknice()
     driver.quit()
     sys.exit()
