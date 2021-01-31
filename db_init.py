@@ -1,6 +1,8 @@
+#!/usr/bin/env python3
 import sqlite3
 import os
 from dotenv import load_dotenv
+
 # .envファイルの内容を読み込みます
 load_dotenv()
 
